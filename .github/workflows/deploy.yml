@@ -1,3 +1,11 @@
+name: CICDPipeline
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
 - name: Deploy
   uses: peaceiris/actions-gh-pages@v3
   with:
