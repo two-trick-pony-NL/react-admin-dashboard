@@ -26,9 +26,11 @@ jobs:
 
     - name: Install dependencies
       run: npm install --force
+    
+    - name: Install react build 
+      run: npm install react-scripts
 
     - name: Build
-      run: npm install react-scripts
       run: npm run build
 
     - name: Deploy
