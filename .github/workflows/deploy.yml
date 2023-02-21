@@ -24,7 +24,7 @@ jobs:
       uses: actions/checkout@v2
     - uses: actions/setup-node@v3
       with:
-        node-version: 16
+        node-version: 18
       
     # Consider this as an add on to optimize the execution of actions
     - name: Cache node modules
@@ -42,7 +42,7 @@ jobs:
           ${{ runner.os }}-
       
     - name: Install package dependencies
-      run: npm install
+      run: npm install --force
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
